@@ -1,4 +1,4 @@
-describe 'Equality Matchers' do
+describe "Equality Matchers" do
   a = "1"
   b = "1"
 
