@@ -14,5 +14,8 @@ describe "Array Matchers" do
 
   it "should match ALL elements with another matcher" do
     expect([1, 2, 3]).to all be_instance_of(Integer)
+
+    # Composition is also allowed in RSpec
+    expect([1, 2, 3]).to all eq(1).or eq(2).or eq(3)
   end
 end
