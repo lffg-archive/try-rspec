@@ -11,4 +11,8 @@ describe "Array Matchers" do
     expect([1, 2, 3]).to match_array([1, 2, 3])
     expect([1, 2, 3]).to contain_exactly(1, 2, 3)
   end
+
+  it "should match ALL elements with another matcher" do
+    expect([1, 2, 3]).to all be_instance_of(Integer)
+  end
 end
