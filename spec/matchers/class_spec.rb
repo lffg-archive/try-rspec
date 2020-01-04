@@ -1,5 +1,8 @@
 class Parent; end
-class Child < Parent; end
+
+class Child < Parent
+  attr_accessor :name
+end
 
 parent = Parent.new
 child = Child.new
@@ -26,5 +29,12 @@ describe "Class Matchers" do
   it "should RESPOND_TO" do
     expect([1, 2, 3]).to respond_to(:size)
     expect(10).not_to respond_to(:some_method_that_number_does_not_have)
+  end
+
+  it "should HAVE_ATTRIBUTES" do
+    c = Child.new
+    c.name = "Luiz"
+    expect(c).to have_attributes(name: "Luiz")
+    expect(c).to have_attributes(name: starting_with("L"))
   end
 end
