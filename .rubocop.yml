@@ -1,0 +1,127 @@
+require:
+  - rubocop-performance
+  - rubocop-rails
+  - rubocop-rspec
+
+AllCops:
+  DisplayStyleGuide: true
+  ExtraDetails: true
+  TargetRubyVersion: 2.6
+  Exclude:
+    - 'node_modules/**/*'
+
+# Metrics:
+
+Metrics/ClassLength:
+  Enabled: false
+
+Metrics/ModuleLength:
+  Enabled: false
+
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*'
+
+Metrics/CyclomaticComplexity:
+  Enabled: true
+  Max: 13
+
+Metrics/PerceivedComplexity:
+  Enabled: true
+  Max: 14
+
+Metrics/MethodLength:
+  Enabled: false
+
+Metrics/ParameterLists:
+  Enabled: false
+
+# Naming
+
+Naming/PredicateName:
+  ForbiddenPrefixes:
+    - is_
+  Exclude:
+    - spec/**/*
+
+# Style
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Style/CollectionMethods:
+  Enabled: true
+  PreferredMethods:
+    find: detect
+    inject: reduce
+    collect: map
+    find_all: select
+
+Style/HashSyntax:
+  EnforcedStyle: ruby19_no_mixed_keys
+
+Style/AsciiComments:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/IfUnlessModifier:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+# Layout
+
+Layout/FirstArgumentIndentation:
+  EnforcedStyle: consistent
+
+Layout/FirstArrayElementIndentation:
+  EnforcedStyle: consistent
+
+Layout/FirstArrayElementLineBreak:
+  Enabled: true
+
+Layout/FirstHashElementIndentation:
+  EnforcedStyle: consistent
+
+Layout/FirstHashElementLineBreak:
+  Enabled: true
+
+Layout/FirstMethodArgumentLineBreak:
+  Enabled: true
+
+Layout/FirstMethodParameterLineBreak:
+  Enabled: true
+
+Layout/FirstParameterIndentation:
+  EnforcedStyle: consistent
+
+Layout/MultilineOperationIndentation:
+  EnforcedStyle: indented
+
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+
+Layout/LineLength:
+  Max: 100
+
+# Rails
+
+Rails:
+  Enabled: true
+
+# RSpec
+
+RSpec/ExampleLength:
+  Enabled: false
+
+RSpec/MultipleExpectations:
+  Enabled: false
+
+RSpec/DescribeClass:
+  Enabled: false
+
+RSpec/ExpectActual:
+  Enabled: false
