@@ -1,5 +1,5 @@
 describe "Double" do
-  let(:subj) { double("Subject") }
+  let(:subj) { instance_double("Subject") }
 
   example "user double" do
     allow(subj).to receive(:foo).and_return(5)
@@ -13,5 +13,8 @@ describe "Double" do
     expect(subj.age).to eq(17)
   end
 
-  example "receive_messsages without "
+  example "as_null_object double" do
+    user = instance_double("User").as_null_object
+    user.abc # Will not fail the test.
+  end
 end
