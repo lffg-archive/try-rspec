@@ -125,3 +125,6 @@ RSpec/DescribeClass:
 
 RSpec/ExpectActual:
   Enabled: false
+
+RSpec/MessageSpies:
+  Enabled: false
