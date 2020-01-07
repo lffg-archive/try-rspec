@@ -21,6 +21,11 @@ describe "Stubs" do
     expect(instance.foo(5)).to eq("Received 5")
   end
 
+  example "and_raise stub" do
+    allow(instance).to receive(:foo).and_raise("Error")
+    expect { instance.foo(5) }.to raise_error("Error")
+  end
+
   example "allow_any_instance_of stub" do
     allow_any_instance_of(Test).to receive(:foo) { |_instance, arg| "Received #{arg}" }
 
