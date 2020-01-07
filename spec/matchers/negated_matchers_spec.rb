@@ -5,7 +5,7 @@
 RSpec::Matchers.define_negated_matcher :not_include, :include
 
 describe "Negated Matchers" do
-  it "should not_include something" do
+  example "not_include something" do
     expect([1, 2, 3]).to not_include(4)
   end
 end

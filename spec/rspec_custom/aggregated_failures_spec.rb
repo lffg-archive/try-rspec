@@ -1,5 +1,5 @@
 describe "Aggregated Failures" do
-  it "should aggregate failures (approach #1)" do
+  example "aggregate failures (approach #1)" do
     aggregate_failures do
       # expect(1).not_to be(1)
       # expect(2).not_to be(2)
@@ -7,7 +7,7 @@ describe "Aggregated Failures" do
     end
   end
 
-  it "should aggregate failures (approach #2)", :aggregate_failures do
+  example "aggregate failures (approach #2)", :aggregate_failures do
     # expect(1).not_to be(1)
     # expect(2).not_to be(2)
     # expect(3).not_to be(3)

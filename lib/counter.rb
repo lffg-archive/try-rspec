@@ -1,6 +1,6 @@
 class Counter
-  def initialize(n)
-    @n = n
+  def initialize(current)
+    @n = current
   end
 
   def current

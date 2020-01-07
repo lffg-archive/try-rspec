@@ -1,5 +1,5 @@
 describe "Comparation Matchers" do
-  it "should compare with >, <, >= or <=" do
+  example "compare with >, <, >= or <=" do
     expect(5).to be > 4
     expect(5).not_to be > 6
 
@@ -10,19 +10,19 @@ describe "Comparation Matchers" do
     expect(9).to be >= 9
   end
 
-  it "should BE_BETWEEN" do
+  example "BE_BETWEEN" do
     expect(5).to be_between(4, 6)
     expect(5).to be_between(5, 5)
     expect(5).to be_between(5, 5).inclusive
     expect(5).not_to be_between(5, 5).exclusive
   end
 
-  it "should MATCH regex" do
+  example "MATCH regex" do
     expect("Luiz").to match(/^Luiz$/)
     expect("Luiz Felipe").not_to match(/^Luiz$/)
   end
 
-  it "should START_WITH or END_WITH" do
+  example "START_WITH or END_WITH" do
     expect("Luiz").to start_with("L")
     expect("Luiz").not_to start_with("l")
 

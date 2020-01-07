@@ -4,7 +4,7 @@ describe "Predicate Matchers" do
   # has its name ending with `?` always returns a boolean, and are called
   # "predicate methods". RSpec convert those predicate methods to matchers, by
   # removing the `?` from its name and prefixing it with `be_`. For example:
-  it "should BE_EVEN" do
+  example "BE_EVEN" do
     expect(2.even?).to be true
     expect(2).to be_even
   end

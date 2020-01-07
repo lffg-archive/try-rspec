@@ -27,10 +27,10 @@ describe "Stubs" do
   end
 
   example "allow_any_instance_of stub" do
-    allow_any_instance_of(Test).to receive(:foo) { |_instance, arg| "Received #{arg}" }
+    allow_any_instance_of(Test).to receive(:foo) { |_instance, arg| "Received #{arg}" } # rubocop:disable RSpec/AnyInstance
 
-    [Test.new, Test.new].each_with_index do |instance, index|
-      expect(Test.new().foo(index)).to eq("Received #{index}")
+    [Test.new, Test.new].each_with_index do |_instance, index|
+      expect(Test.new.foo(index)).to eq("Received #{index}")
     end
   end
 end
